@@ -1,6 +1,4 @@
-import pandas as pd
-from io import StringIO
-import re
+
 def read_html_to_dataframe(html_file_path):
     try:
         with open(html_file_path, 'r', encoding='utf-8') as file:
