@@ -1,20 +1,4 @@
 
-import pandas as pd
-from io import StringIO
-import re
-def read_html_to_dataframe(html_file_path):
-    try:
-        with open(html_file_path, 'r', encoding='utf-8') as file:
-            html_content = file.read()
-
-        html_io = StringIO(html_content)
-
-        tables = pd.read_html(html_io)
-        return tables[0]
-    except FileNotFoundError:
-        print(f"File not found: {html_file_path}")
-    except Exception as e:
-        print(f"An error occurred: {e}")
 
 df = read_html_to_dataframe(r'D:\python\pythonProject\Financial_Data_Analysis .html')
 print(df)
