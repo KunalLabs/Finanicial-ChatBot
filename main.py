@@ -15,7 +15,6 @@ def read_html_to_dataframe(html_file_path):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-
 df = read_html_to_dataframe(r'D:\python\pythonProject\Financial_Data_Analysis .html')
 print(df)
 
